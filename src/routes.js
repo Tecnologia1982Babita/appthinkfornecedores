@@ -9,6 +9,7 @@ import consultaprodutos from "./components/consultaprodutos/consultaprodutos";
 import movimentacao from "./components/movimentacao/movimentacao";
 
 
+
 export default function Routes (){
     return(
      <BrowserRouter>
@@ -19,6 +20,7 @@ export default function Routes (){
          <Route path="/checkpromo" component={checkpromo}/>
          <Route path="/consultaprodutos" component={consultaprodutos}/>
          <Route path="/movimentacao" component={movimentacao}/>
+         
          
      </BrowserRouter>
     );

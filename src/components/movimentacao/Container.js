@@ -87,7 +87,7 @@ padding: 20px;
         grid-row: 2;
         margin: 50px 0 0 0;
     }
-   @media screen and (max-width: 767px){
+   @media screen and (max-width: 600px){
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
@@ -221,7 +221,7 @@ overflow: none;
             grid-column:1/2;
             margin: 70px 0 0 0;
             width: 30%;
-            height: 55%;
+            height: 60%;
                     
             .Campo{
                 display: grid;
@@ -256,8 +256,25 @@ overflow: none;
             .Botao1{
                 margin: 15px 0 5px 15px;
                 width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
             }
-                
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+            
         } // fim card5
                 
                 
@@ -306,10 +323,28 @@ overflow: none;
                     margin: 20px 0 0 15px;
                 }
 
-                .Botao1{
-                    margin: 15px 0 5px 15px;
-                    width: 40%;
-                }
+                
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
                 
             } // fim card6
 
@@ -359,16 +394,34 @@ overflow: none;
                     margin: 20px 0 0 15px;
                 }
 
-                .Botao1{
-                    margin: 15px 0 5px 15px;
-                    width: 40%;
-                }
+                
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
                 
             } // fim card7                             
             
             
             
-            @media (max-width: 767px){
+            @media (max-width: 600px){
                 > div{
                     overflow: none;
 
@@ -404,49 +457,47 @@ overflow: none;
 
                     
                 
-                    .Card5{
-                        display: flex;
-                        grid-column: 1/3;
-                        width: 45vh;
-                        heigth: 90%;
-                        margin-left: -5px;
-
+                .Card5{
+                    display: flex;
+                    grid-column: 1/3;
+                    width: 45vh;
+                    heigth: 90%;
+                    margin-left: -5px;
+                    
+                    .Campo{
                         
-                        .Campo{
-                            
-                            justify-content: space-bettewn;
-                            margin-left: 10px;
-                        }
-                        #data {
-                            display: grid;
-                            justify-content: space-bettewn;
-                            background-color: transparent;
-                            border: none;
-                            border-bottom: 1px solid black;                
-                            outline: none;
-                            height: 2rem;
-                            width: 80%;
-                            font-size: 1rem;
-                            margin: 0 2% 0 10%;
-                            padding: 0;
-                            box-shadow: none;
-                            box-sizing: content-box;
-                            transition: all 0.3s;
-                        }  
-
-                        .Campo1{
-                            margin: 10px;
-                        }
-
-                        > div .Botao{
-                            display: flex;
-                            width: 90%;
-                        }
-                        .Botao1{
-                            width: 90%;
-                            margin: 15px 0 5px 15px;
-                            
-                        }
+                        justify-content: space-bettewn;
+                        margin-left: 10px;
+                    }
+                    #data {
+                        display: grid;
+                        justify-content: space-bettewn;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid black;                
+                        outline: none;
+                        height: 2rem;
+                        width: 80%;
+                        font-size: 1rem;
+                        margin: 0 2% 0 10%;
+                        padding: 0;
+                        box-shadow: none;
+                        box-sizing: content-box;
+                        transition: all 0.3s;
+                    }  
+                    .Campo1{
+                        margin: 10px;
+                    }
+                    > div .Botao{
+                        display: flex;
+                        width: 90%;
+                    }
+                    .Botao1{
+                        width: 90%;
+                        margin: 15px 0 5px 15px;
+                        
+                    }
+                } // fim card5
 
                     } // fim card5
             
@@ -490,7 +541,23 @@ overflow: none;
                         .Botao1{
                             width: 90%;
                             margin: 15px 0 5px 15px;
-                            
+                            border-radius: 5px;
+                            padding-top: 1%;
+                            background: #007bff;
+                            color: white;                
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                            border: none;	
+                        }         
+                        
+                        .Botao1:hover {
+                            background: white;
+                            color: #007bff;
+                        }
+                        
+                        
+                        .Botao1:focus {
+                            background: white;
+                            color: #007bff;
                         }
                     }     //fim card6
 
@@ -536,8 +603,24 @@ overflow: none;
                         .Botao1{
                             width: 90%;
                             margin: 15px 0 5px 15px;
-                            
-                        } 
+                            border-radius: 5px;
+                            padding-top: 1%;
+                            background: #007bff;
+                            color: white;                
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                            border: none;	
+                        }         
+                        
+                        .Botao1:hover {
+                            background: white;
+                            color: #007bff;
+                        }
+                        
+                        
+                        .Botao1:focus {
+                            background: white;
+                            color: #007bff;
+                        }
                     } //fim card7                   
                 } // fim media 767px
 
@@ -617,10 +700,25 @@ overflow: none;
                             width: 90%;
                         }
                         .Botao1{
-                            width: 90%;
                             margin: 15px 0 5px 15px;
-                            
+                            width: 40%;
+                            border-radius: 5px;
+                            padding-top: 1%;
+                            background: #007bff;
+                            color: white;                
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                            border: none;	
+                        }         
+                        
+                        .Botao1:hover {
+                            background: white;
+                            color: #007bff;
                         }
+                        
+                        
+                        .Botao1:focus {
+                            background: white;
+                            color: #007bff;
     
                     }
             
@@ -708,10 +806,25 @@ overflow: none;
                             width: 90%;
                         }
                         .Botao1{
-                            width: 90%;
                             margin: 15px 0 5px 15px;
-                            
+                            width: 40%;
+                            border-radius: 5px;
+                            padding-top: 1%;
+                            background: #007bff;
+                            color: white;                
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                            border: none;	
+                        }         
+                        
+                        .Botao1:hover {
+                            background: white;
+                            color: #007bff;
                         }
+                        
+                        
+                        .Botao1:focus {
+                            background: white;
+                            color: #007bff;
                     }
 
                 }
@@ -728,390 +841,457 @@ overflow: none;
 
 
 
-    export const Devolu = styled.div`
-
-        .div3{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 5px;
-            padding: 20px;
-            overflow: none;
-
-            
-            > div .Sele2{
-                grid-column: 2/3;
-                width: 40%;
-                margin: 0 0 0 33%;
-            }
-
-            > div{
-                grid-column: 1/5;
-                overflow: none;
-
-                > div .Tabela1{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18% -15% 0% 33%;
-                    overflow: auto;
-                }
-            
-                .Card8{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-                    .Campo{
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-            
-                }
-        
-            
-                > div .Tabela2{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18% -15% 0% 33%;
-                    overflow: auto;
-                }
-
-                .Card9{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-                }
-        
-                > div .Tabela3{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18.5% -15% 0% 33%;
-                    overflow: auto;
-                }
-                .Card10{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-                }
-            
-
-        
-            @media (max-width: 767px){
-                > div{
-                    overflow: none;
-
-                    > div .Sele2{
-                        grid-column: 1/4;
-                        width: 100%;                        
-                
-                    }
-
-                    > div .Tabela1{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela2{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela3{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-
-
-                }
-
-                
-            
-                .Card8{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-
-                }
-        
-        
-                .Card9{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }    
-
-        
-        
-
-                .Card10{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }
-
-                
-            }
-        }
-    }    
-`;
-
-
-export const Pedido = styled.div`
-
-.div4{
+export const Devolu = styled.div`
+.div3{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     padding: 20px;
     overflow: none;
-
     
     > div .Sele2{
         grid-column: 2/3;
         width: 40%;
         margin: 0 0 0 33%;
     }
-
     > div{
         grid-column: 1/5;
         overflow: none;
+        > div .Tabela1{
+            width: 110%;
+            height: 400px;
+            margin: -18% -15% 0% 33%;
+            overflow: auto;
+        }
+    
+        .Card8{
+            display: flex;
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
+            .Campo{
+                justify-content: space-bettewn;
+            }
 
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+
+            .Campo1{
+                width: 93%;
+                margin: 15px 0 0 10px;
+            }
+
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+    
+        }
+
+    
+        > div .Tabela2{
+            width: 110%;
+            height: 400px;
+            margin: -18% -15% 0% 33%;
+            overflow: auto;
+        }
+        .Card9{
+            display: flex;
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
+            .Campo{
+                width: 40%;
+                justify-content: space-bettewn;
+            }
+
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+
+            .Campo1{
+                width: 93%;
+                margin: 15px 0 0 10px;
+            }
+
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+         }
+
+        }
+
+        > div .Tabela3{
+            width: 110%;
+            height: 400px;
+            margin: -18.5% -15% 0% 33%;
+            overflow: auto;
+        }
+        .Card10{
+            display: flex;
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
+            .Campo{
+                width: 40%;
+                justify-content: space-bettewn;
+            }
+
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+
+            .Campo1{
+                width: 93%;
+                margin: 15px 0 0 10px;
+            }
+
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+    
+
+    @media (max-width: 600px){
+        > div{
+            overflow: none;
+            > div .Sele2{
+                grid-column: 1/4;
+                width: 100%;                        
+        
+            }
+            > div .Tabela1{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela2{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela3{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+        
+    
+        .Card8{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+
+
+        .Card9{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                width: 40%;
+                justify-content: space-bettewn;
+            }
+
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }    
+
+
+        .Card10{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                
+            }
+        }
+        
+    }
+}
+}    
+`;
+
+export const Pedido = styled.div`
+.div4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 20px;
+    overflow: none;
+    
+    > div .Sele2{
+        grid-column: 2/3;
+        width: 40%;
+        margin: 0 0 0 33%;
+    }
+    > div{
+        grid-column: 1/5;
+        overflow: none;
         > div .Tabela1{
             width: 110%;
             height: 400px;
@@ -1126,12 +1306,10 @@ export const Pedido = styled.div`
             width: 30%;
             height: 55%;
         
-
             .Campo{
                 width: 40%;
                 justify-content: space-bettewn;
             }
-
             #data {
                 display: grid;
                 justify-content: space-bettewn;
@@ -1152,18 +1330,32 @@ export const Pedido = styled.div`
                 width: 93%;
                 margin: 15px 0 0 10px;
             }
-
             .Botao{
                 margin: 20px 0 0 15px;
             }
-
             .Botao1{
                 margin: 15px 0 5px 15px;
                 width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
             }
     
         }
-
     
         > div .Tabela2{
             width: 110%;
@@ -1171,7 +1363,6 @@ export const Pedido = styled.div`
             margin: -18% -15% 0% 33%;
             overflow: auto;
         }
-
         .Card12{
             display: flex;
             grid-column:1/2;
@@ -1183,7 +1374,6 @@ export const Pedido = styled.div`
                 width: 40%;
                 justify-content: space-bettewn;
             }
-
             #data {
                 display: grid;
                 justify-content: space-bettewn;
@@ -1200,22 +1390,35 @@ export const Pedido = styled.div`
                 box-sizing: content-box;
                 transition: all 0.3s;
             }  
-
             .Campo1{
                 width: 93%;
                 margin: 15px 0 0 10px;
             }
-
             .Botao{
                 margin: 20px 0 0 15px;
             }
-
             .Botao1{
                 margin: 15px 0 5px 15px;
                 width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
             }
         }
-
         > div .Tabela3{
             width: 110%;
             height: 400px;
@@ -1229,7 +1432,284 @@ export const Pedido = styled.div`
             width: 30%;
             height: 55%;
         
+            .Campo{
+                width: 40%;
+                justify-content: space-bettewn;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                width: 93%;
+                margin: 15px 0 0 10px;
+            }
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+    
+    @media (max-width: 600px){
+        > div{
+            overflow: none;
+            > div .Sele2{
+                grid-column: 1/4;
+                width: 100%;                        
+        
+            }
+            > div .Tabela1{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela2{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela3{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+        }
+        
+    
+        .Card11{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+        .Card12{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }    
+        .Card13{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+        
+    }
+`;
 
+export const Troca = styled.div`
+.div5{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    padding: 20px;
+    overflow: none;
+    
+    > div .Sele2{
+        grid-column: 2/3;
+        width: 40%;
+        margin: 0 0 0 33%;
+    }
+    > div{
+        grid-column: 1/5;
+        overflow: none;
+        > div .Tabela1{
+            width: 110%;
+            height: 400px;
+            margin: -18% -15% 0% 33%;
+            overflow: auto;
+        }
+    
+        .Card14{
+            display: flex;
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
             .Campo{
                 width: 40%;
                 justify-content: space-bettewn;
@@ -1264,57 +1744,44 @@ export const Pedido = styled.div`
             .Botao1{
                 margin: 15px 0 5px 15px;
                 width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
             }
-        }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
     
-
-
-    @media (max-width: 767px){
-        > div{
-            overflow: none;
-
-            > div .Sele2{
-                grid-column: 1/4;
-                width: 100%;                        
-        
-            }
-
-            > div .Tabela1{
-                width: 110%;
-                height: 400px;
-                margin: 30% -15% 0% -5px;
-                overflow: auto;
-            }
-
-            > div .Tabela2{
-                width: 110%;
-                height: 400px;
-                margin: 30% -15% 0% -5px;
-                overflow: auto;
-            }
-
-            > div .Tabela3{
-                width: 110%;
-                height: 400px;
-                margin: 30% -15% 0% -5px;
-                overflow: auto;
-            }
-
-
         }
 
-        
     
-        .Card11{
+        > div .Tabela2{
+            width: 110%;
+            height: 400px;
+            margin: -18% -15% 0% 33%;
+            overflow: auto;
+        }
+        .Card15{
             display: flex;
-            grid-column: 1/3;
-            width: 45vh;
-            heigth: 90%;
-            margin-left: -5px;
-
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
             .Campo{
+                width: 40%;
                 justify-content: space-bettewn;
-                margin-left: 10px;
             }
 
             #data {
@@ -1335,9 +1802,219 @@ export const Pedido = styled.div`
             }  
 
             .Campo1{
-                margin: 10px;
+                width: 93%;
+                margin: 15px 0 0 10px;
             }
 
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+
+        > div .Tabela3{
+            width: 110%;
+            height: 400px;
+            margin: -18.5% -15% 0% 33%;
+            overflow: auto;
+        }
+        .Card16{
+            display: flex;
+            grid-column:1/2;
+            margin: 70px 0 0 0;
+            width: 30%;
+            height: 55%;
+        
+            .Campo{
+                width: 40%;
+                justify-content: space-bettewn;
+            }
+
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+
+            .Campo1{
+                width: 93%;
+                margin: 15px 0 0 10px;
+            }
+
+            .Botao{
+                margin: 20px 0 0 15px;
+            }
+
+            .Botao1{
+                margin: 15px 0 5px 15px;
+                width: 40%;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+    
+
+    @media (max-width: 600px){
+        > div{
+            overflow: none;
+            > div .Sele2{
+                grid-column: 1/4;
+                width: 100%;                        
+        
+            }
+            > div .Tabela1{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela2{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela3{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+        }
+        
+    
+        .Card14{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+           > div .Botao{
+                    display: flex;
+                    width: 90%;
+                }
+                .Botao1{
+                    width: 90%;
+                    margin: 15px 0 5px 15px;
+                    border-radius: 5px;
+                    padding-top: 1%;
+                    background: #007bff;
+                    color: white;                
+                    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                    border: none;	
+                }         
+                
+                .Botao1:hover {
+                    background: white;
+                    color: #007bff;
+                }
+                
+                
+                .Botao1:focus {
+                    background: white;
+                    color: #007bff;
+                }
+        }
+
+
+        .Card15{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
             > div .Botao{
                 display: flex;
                 width: 90%;
@@ -1345,24 +2022,37 @@ export const Pedido = styled.div`
             .Botao1{
                 width: 90%;
                 margin: 15px 0 5px 15px;
-                
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
             }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }    
 
-        }
 
-
-        .Card12{
+        .Card16{
             display: flex;
             grid-column: 1/3;
             width: 45vh;
             heigth: 90%;
             margin-left: -5px;
-
             .Campo{
                 justify-content: space-bettewn;
                 margin-left: 10px;
             }
-
             #data {
                 display: grid;
                 justify-content: space-bettewn;
@@ -1379,11 +2069,136 @@ export const Pedido = styled.div`
                 box-sizing: content-box;
                 transition: all 0.3s;
             }  
-
             .Campo1{
                 margin: 10px;
             }
+            > div .Botao{
+                display: flex;
+                width: 90%;
+            }
+            .Botao1{
+                width: 90%;
+                margin: 15px 0 5px 15px;
+                border-radius: 5px;
+                padding-top: 1%;
+                background: #007bff;
+                color: white;                
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                border: none;	
+            }         
+            
+            .Botao1:hover {
+                background: white;
+                color: #007bff;
+            }
+            
+            
+            .Botao1:focus {
+                background: white;
+                color: #007bff;
+            }
+        }
+        
+    }
+    @media (max-width: 1200px){
+        > div{
+            overflow: none;
+            > div .Sele2{
+                grid-column: 1/4;
+                width: 100%;                        
+        
+            }
+            > div .Tabela1{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela2{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+            > div .Tabela3{
+                width: 110%;
+                height: 400px;
+                margin: 30% -15% 0% -5px;
+                overflow: auto;
+            }
+        }
+        
+    
+        .Card14{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
+           > div .Botao{
+                    display: flex;
+                    width: 90%;
+                }
+            .Botao1{
+                    width: 90%;
+                    margin: 15px 0 5px 15px;
+                    
+            }
+        }
 
+
+        .Card15{
+            display: flex;
+            grid-column: 1/3;
+            width: 45vh;
+            heigth: 90%;
+            margin-left: -5px;
+            .Campo{
+                justify-content: space-bettewn;
+                margin-left: 10px;
+            }
+            #data {
+                display: grid;
+                justify-content: space-bettewn;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid black;                
+                outline: none;
+                height: 2rem;
+                width: 80%;
+                font-size: 1rem;
+                margin: 0 2% 0 10%;
+                padding: 0;
+                box-shadow: none;
+                box-sizing: content-box;
+                transition: all 0.3s;
+            }  
+            .Campo1{
+                margin: 10px;
+            }
             > div .Botao{
                 display: flex;
                 width: 90%;
@@ -1396,20 +2211,16 @@ export const Pedido = styled.div`
         }    
 
 
-
-
-        .Card13{
+        .Card16{
             display: flex;
             grid-column: 1/3;
             width: 45vh;
             heigth: 90%;
             margin-left: -5px;
-
             .Campo{
                 justify-content: space-bettewn;
                 margin-left: 10px;
             }
-
             #data {
                 display: grid;
                 justify-content: space-bettewn;
@@ -1426,11 +2237,9 @@ export const Pedido = styled.div`
                 box-sizing: content-box;
                 transition: all 0.3s;
             }  
-
             .Campo1{
                 margin: 10px;
             }
-
             > div .Botao{
                 display: flex;
                 width: 90%;
@@ -1441,540 +2250,8 @@ export const Pedido = styled.div`
                 
             }
         }
-
         
     }
+}
+}    
 `;
-
-  export const Troca = styled.div`
-
-        .div5{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 5px;
-            padding: 20px;
-            overflow: none;
-
-            
-            > div .Sele2{
-                grid-column: 2/3;
-                width: 40%;
-                margin: 0 0 0 33%;
-            }
-
-            > div{
-                grid-column: 1/5;
-                overflow: none;
-
-                > div .Tabela1{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18% -15% 0% 33%;
-                    overflow: auto;
-                }
-            
-                .Card14{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-            
-                }
-        
-            
-                > div .Tabela2{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18% -15% 0% 33%;
-                    overflow: auto;
-                }
-
-                .Card15{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-                }
-        
-                > div .Tabela3{
-                    width: 110%;
-                    height: 400px;
-                    margin: -18.5% -15% 0% 33%;
-                    overflow: auto;
-                }
-                .Card16{
-                    display: flex;
-                    grid-column:1/2;
-                    margin: 70px 0 0 0;
-                    width: 30%;
-                    height: 55%;
-                
-
-                    .Campo{
-                        width: 40%;
-                        justify-content: space-bettewn;
-                    }
-    
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-    
-                    .Campo1{
-                        width: 93%;
-                        margin: 15px 0 0 10px;
-                    }
-    
-                    .Botao{
-                        margin: 20px 0 0 15px;
-                    }
-    
-                    .Botao1{
-                        margin: 15px 0 5px 15px;
-                        width: 40%;
-                    }
-                }
-            
-
-        
-            @media (max-width: 767px){
-                > div{
-                    overflow: none;
-
-                    > div .Sele2{
-                        grid-column: 1/4;
-                        width: 100%;                        
-                
-                    }
-
-                    > div .Tabela1{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela2{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela3{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-
-                }
-
-                
-            
-                .Card14{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                   > div .Botao{
-                            display: flex;
-                            width: 90%;
-                        }
-                    .Botao1{
-                            width: 90%;
-                            margin: 15px 0 5px 15px;
-                            
-                    }
-
-                }
-        
-        
-                .Card15{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }    
-
-        
-        
-
-                .Card16{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }
-
-                
-            }
-            @media (max-width: 1200px){
-                > div{
-                    overflow: none;
-
-                    > div .Sele2{
-                        grid-column: 1/4;
-                        width: 100%;                        
-                
-                    }
-
-                    > div .Tabela1{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela2{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-                    > div .Tabela3{
-                        width: 110%;
-                        height: 400px;
-                        margin: 30% -15% 0% -5px;
-                        overflow: auto;
-                    }
-
-
-                }
-
-                
-            
-                .Card14{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                   > div .Botao{
-                            display: flex;
-                            width: 90%;
-                        }
-                    .Botao1{
-                            width: 90%;
-                            margin: 15px 0 5px 15px;
-                            
-                    }
-
-                }
-        
-        
-                .Card15{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }    
-
-        
-        
-
-                .Card16{
-                    display: flex;
-                    grid-column: 1/3;
-                    width: 45vh;
-                    heigth: 90%;
-                    margin-left: -5px;
-
-                    .Campo{
-                        justify-content: space-bettewn;
-                        margin-left: 10px;
-                    }
-
-                    #data {
-                        display: grid;
-                        justify-content: space-bettewn;
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 1px solid black;                
-                        outline: none;
-                        height: 2rem;
-                        width: 80%;
-                        font-size: 1rem;
-                        margin: 0 2% 0 10%;
-                        padding: 0;
-                        box-shadow: none;
-                        box-sizing: content-box;
-                        transition: all 0.3s;
-                    }  
-
-                    .Campo1{
-                        margin: 10px;
-                    }
-
-                    > div .Botao{
-                        display: flex;
-                        width: 90%;
-                    }
-                    .Botao1{
-                        width: 90%;
-                        margin: 15px 0 5px 15px;
-                        
-                    }
-                }
-
-                
-            }
-        }
-    }    
-`;
-

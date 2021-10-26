@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Routes from './routes';
 //import TabelaFornecedor from './components/tabelaFornecedor/TabelaFornecedor';
 import "react-datepicker/dist/react-datepicker.css";
+//import  './App.scss';
 
 /*class App extends Component{
 

@@ -1,14 +1,15 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { Card, FormGroup, Label, Input } from 'reactstrap';
+import { Card, FormGroup, Label, Input, Table } from 'reactstrap';
 import MenuSuperior from '../menuSuperior/MenuSuperior';
 import api from '../../api'
 import $ from "jquery";
 import { ptBR } from 'date-fns/locale'
 import DatePicker from "react-datepicker";
 import moment from 'moment';
-
-
-import { StickyTable, Cell, Rows } from 'react-sticky-table';                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
+import jsPDF from 'jspdf'
+import 'jspdf-autotable'
+import { StickyTable, Cell, Rows } from 'react-sticky-table';
 import { Container, Corpo, Devolu, Pedido, Troca } from './Container';
 
 
@@ -334,6 +335,7 @@ const Movimentacao = (props) => {
 
     {/* Tabela por código */ }
     const tabelamovimentacao2 = useCallback(() => {
+        console.log(tabelamovimentacao2);
         api.get(`totitementcod/${datainicial}/${datafinal}/${combocodigosele2}/`).then(response => {
             setTabela2(response.data)
 
@@ -433,6 +435,107 @@ const Movimentacao = (props) => {
 
         })
     }, [datainicial, datafinal, combocodigosele12]);
+
+    function PDF2() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio2' })
+
+        pdf.save('relatorio2.pdf');
+    };
+
+    function PDF3() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio3' })
+
+        pdf.save('relatorio3.pdf');
+    };
+
+    function PDF4() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio4' })
+
+        pdf.save('relatorio4.pdf');
+    };
+    function PDF5() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio5' })
+
+        pdf.save('relatorio5.pdf');
+    };
+
+    function PDF6() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio6' })
+
+        pdf.save('relatorio6.pdf');
+    };
+
+    function PDF7() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio7' })
+
+        pdf.save('relatorio7.pdf');
+    };
+    function PDF8() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio8' })
+
+        pdf.save('relatorio8.pdf');
+    };
+    function PDF9() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio9' })
+
+        pdf.save('relatorio9.pdf');
+    };
+    function PDF10() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio10' })
+
+        pdf.save('relatorio10.pdf');
+    };
+    function PDF11() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio11' })
+
+        pdf.save('relatorio11.pdf');
+    };
+    function PDF12() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio12' })
+
+        pdf.save('relatorio12.pdf');
+    };
+    function PDF13() {
+        var pdf = new jsPDF();
+
+
+        pdf.autoTable({ html: '#relatorio13' })
+
+        pdf.save('relatorio13.pdf');
+    };
 
 
     return (
@@ -535,7 +638,7 @@ const Movimentacao = (props) => {
                                         id="select"
                                         className="Campo1"
                                         label="Buscar"
-                                        style={{width: '93%'}}
+                                        style={{ width: '93%' }}
                                         onChange={onChange1}
                                     >
                                         <option selected disabled value="">Selecione Opção</option>
@@ -545,9 +648,16 @@ const Movimentacao = (props) => {
                                     </Input>
                                     <div>
                                         <Button onClick={tabelamovimentacao} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                        <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                        <Button onClick={PDF2} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                     </div>
-                                    <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
+                                    {/* <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                    <ReactHTMLTableToExcel
+                                        className="Botao1"
+                                        table="relatorio2"
+                                        filename="tablexls"
+                                        sheet="tablexls"
+                                        buttonText="Baixar Excel"
+                                    />
                                 </Card>
 
                                 <div>
@@ -557,7 +667,6 @@ const Movimentacao = (props) => {
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DOCUMENTO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DATA</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>LOJA</Cell>
-                                            <Cell style={{ background: '#007bff', color: 'white' }}>CÓDIGO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>QUANTIDADE</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>TOTAL GERAL</Cell>
                                         </Rows>
@@ -566,7 +675,6 @@ const Movimentacao = (props) => {
                                                 <Cell>{tabela.documento}</Cell>
                                                 <Cell>{tabela.data}</Cell>
                                                 <Cell>{tabela.loja_origem}</Cell>
-                                                <Cell>{tabela.codigofab}</Cell>
                                                 <Cell>{tabela.quantidade}</Cell>
                                                 <Cell>{tabela.totalgeral}</Cell>
                                             </Rows>
@@ -574,6 +682,33 @@ const Movimentacao = (props) => {
                                     </StickyTable>
                                 </div>
 
+                            </div>
+                            <div className='tabela hide'>
+                                <Table responsive id="relatorio2" >
+                                    <thead className="cabecalho" fixed>
+                                        <tr>
+                                            <th> DOCUMENTO </th>
+                                            <th> DATA </th>
+                                            <th> LOJA </th>
+                                            <th> QUANTIDADE </th>
+                                            <th> TOTAL GERAL </th>
+
+                                        </tr>
+                                    </thead>
+
+                                    {tabela.map((tabela, idx) => (
+                                        <tbody key={idx} tabela={tabela} className="cabecalho2" >
+                                            <tr>
+
+                                                <td> {tabela.documento}</td>
+                                                <td> {tabela.data}</td>
+                                                <td> {tabela.loja_origem}</td>
+                                                <td> {tabela.quantidade}</td>
+                                                <td> {tabela.totalgeral}</td>
+                                            </tr>
+                                        </tbody>
+                                    ))}
+                                </Table>
                             </div>
 
 
@@ -621,10 +756,17 @@ const Movimentacao = (props) => {
 
                                     <div>
                                         <Button onClick={tabelamovimentacao2} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                        <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
-                                    </div>
-                                    <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
+                                        <Button onClick={PDF3} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
 
+                                    </div>
+                                    {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                    <ReactHTMLTableToExcel
+                                        className="Botao1"
+                                        table="relatorio3"
+                                        filename="tablexls"
+                                        sheet="tablexls"
+                                        buttonText="Baixar Excel"
+                                    />
 
                                 </Card>
                                 <div>
@@ -634,7 +776,6 @@ const Movimentacao = (props) => {
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DOCUMENTO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DATA</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>LOJA</Cell>
-                                            <Cell style={{ background: '#007bff', color: 'white' }}>CÓDIGO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>QUANTIDADE</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>TOTAL GERAL</Cell>
                                         </Rows>
@@ -643,7 +784,6 @@ const Movimentacao = (props) => {
                                                 <Cell>{tabela2.documento}</Cell>
                                                 <Cell>{tabela2.data}</Cell>
                                                 <Cell>{tabela2.loja_origem}</Cell>
-                                                <Cell>{tabela2.codigofab}</Cell>
                                                 <Cell>{tabela2.quantidade}</Cell>
                                                 <Cell>{tabela2.totalgeral}</Cell>
                                             </Rows>
@@ -651,6 +791,34 @@ const Movimentacao = (props) => {
                                     </StickyTable>
                                 </div>
                             </div>
+                            <div className='tabela hide'>
+                                <Table responsive id="relatorio3" >
+                                    <thead className="cabecalho" fixed>
+                                        <tr>
+                                            <th> DOCUMENTO </th>
+                                            <th> DATA </th>
+                                            <th> LOJA </th>
+                                            <th> QUANTIDADE </th>
+                                            <th> TOTAL GERAL </th>
+
+                                        </tr>
+                                    </thead>
+
+                                    {tabela2.map((tabela2, idx) => (
+                                        <tbody key={idx} tabela={tabela2} className="cabecalho2" >
+                                            <tr>
+
+                                                <td> {tabela2.documento}</td>
+                                                <td> {tabela2.data}</td>
+                                                <td> {tabela2.loja_origem}</td>
+                                                <td> {tabela2.quantidade}</td>
+                                                <td> {tabela2.totalgeral}</td>
+                                            </tr>
+                                        </tbody>
+                                    ))}
+                                </Table>
+                            </div>
+
                             <div id="entrada3" className="hide">
 
                                 <Card className="Card7" >
@@ -690,10 +858,16 @@ const Movimentacao = (props) => {
 
                                     <div>
                                         <Button onClick={tabelamovimentacao3} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                        <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                        <Button onClick={PDF4} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                     </div>
-                                    <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                    {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                    <ReactHTMLTableToExcel
+                                        className="Botao1"
+                                        table="relatorio4"
+                                        filename="tablexls"
+                                        sheet="tablexls"
+                                        buttonText="Baixar Excel"
+                                    />
 
 
                                 </Card>
@@ -704,7 +878,6 @@ const Movimentacao = (props) => {
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DOCUMENTO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>DATA</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>LOJA</Cell>
-                                            <Cell style={{ background: '#007bff', color: 'white' }}>CÓDIGO</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>QUATIDADE</Cell>
                                             <Cell style={{ background: '#007bff', color: 'white' }}>TOTAL GERAL</Cell>
                                         </Rows>
@@ -713,7 +886,6 @@ const Movimentacao = (props) => {
                                                 <Cell>{tabela3.documento}</Cell>
                                                 <Cell>{tabela3.data}</Cell>
                                                 <Cell>{tabela3.loja_origem}</Cell>
-                                                <Cell>{tabela3.codigofab}</Cell>
                                                 <Cell>{tabela3.quantidade}</Cell>
                                                 <Cell>{tabela3.totalgeral}</Cell>
                                             </Rows>
@@ -723,7 +895,33 @@ const Movimentacao = (props) => {
                             </div>
                         </div>
                     </div>
+                    <div className='tabela hide'>
+                        <Table responsive id="relatorio4" >
+                            <thead className="cabecalho" fixed>
+                                <tr>
+                                    <th> DOCUMENTO </th>
+                                    <th> DATA </th>
+                                    <th> LOJA </th>
+                                    <th> QUANTIDADE </th>
+                                    <th> TOTAL GERAL </th>
 
+                                </tr>
+                            </thead>
+
+                            {tabela3.map((tabela3, idx) => (
+                                <tbody key={idx} tabela={tabela3} className="cabecalho2" >
+                                    <tr>
+
+                                        <td> {tabela3.documento}</td>
+                                        <td> {tabela3.data}</td>
+                                        <td> {tabela3.loja_origem}</td>
+                                        <td> {tabela3.quantidade}</td>
+                                        <td> {tabela3.totalgeral}</td>
+                                    </tr>
+                                </tbody>
+                            ))}
+                        </Table>
+                    </div>
 
                     <div id="devolucao" className="hide">
 
@@ -790,10 +988,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao4} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF5} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio5"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
                                         </Card>
                                         <div>
                                             {/*TABELA 1 TODOS OS CÓDIGOS*/}
@@ -802,7 +1006,6 @@ const Movimentacao = (props) => {
                                                     <Cell style={{ background: '#007bff', color: 'white' }}>DOCUMENTO</Cell>
                                                     <Cell style={{ background: '#007bff', color: 'white' }}>DATA</Cell>
                                                     <Cell style={{ background: '#007bff', color: 'white' }}>LOJA</Cell>
-                                                    <Cell style={{ background: '#007bff', color: 'white' }}>CÓDIGO</Cell>
                                                     <Cell style={{ background: '#007bff', color: 'white' }}>QUANTIDADE</Cell>
                                                     <Cell style={{ background: '#007bff', color: 'white' }}>TOTAL GERAL</Cell>
                                                 </Rows>
@@ -811,13 +1014,41 @@ const Movimentacao = (props) => {
                                                         <Cell>{tabela4.documento}</Cell>
                                                         <Cell>{tabela4.data}</Cell>
                                                         <Cell>{tabela4.loja_origem}</Cell>
-                                                        <Cell>{tabela4.codigofab}</Cell>
                                                         <Cell>{tabela4.quantidade}</Cell>
                                                         <Cell>{tabela4.totalgeral}</Cell>
                                                     </Rows>
                                                 ))}
                                             </StickyTable>
                                         </div>
+                                    </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio5" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela4.map((tabela4, idx) => (
+                                                <tbody key={idx} tabela={tabela4} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela4.documento}</td>
+                                                        <td> {tabela4.data}</td>
+                                                        <td> {tabela4.loja_origem}</td>
+                                                        <td> {tabela4.codigofab} </td>
+                                                        <td> {tabela4.quantidade}</td>
+                                                        <td> {tabela4.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
                                     </div>
                                     <div id="devolucao2" className="hide">
 
@@ -865,11 +1096,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao5} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF6} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            { /*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio6"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
                                         </Card>
                                         <div>
                                             {/*TABELA 2 POR CÓDIGO */}
@@ -895,6 +1131,35 @@ const Movimentacao = (props) => {
                                                 ))}
                                             </StickyTable>
                                         </div>
+                                    </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio6" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela5.map((tabela5, idx) => (
+                                                <tbody key={idx} tabela={tabela5} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela5.documento}</td>
+                                                        <td> {tabela5.data}</td>
+                                                        <td> {tabela5.loja_origem}</td>
+                                                        <td> {tabela5.codigofab} </td>
+                                                        <td> {tabela5.quantidade}</td>
+                                                        <td> {tabela5.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
                                     </div>
                                     <div id="devolucao3" className="hide">
 
@@ -932,10 +1197,16 @@ const Movimentacao = (props) => {
                                             </TextField>
                                             <div>
                                                 <Button onClick={tabelamovimentacao6} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF7} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/* <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio7"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
 
                                         </Card>
                                         <div>
@@ -963,7 +1234,37 @@ const Movimentacao = (props) => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className='tabela hide'>
+                                    <Table responsive id="relatorio7" >
+                                        <thead className="cabecalho" fixed>
+                                            <tr>
+                                                <th> DOCUMENTO </th>
+                                                <th> DATA </th>
+                                                <th> LOJA </th>
+                                                <th> CÓDIGO</th>
+                                                <th> QUANTIDADE </th>
+                                                <th> TOTAL GERAL </th>
+
+                                            </tr>
+                                        </thead>
+
+                                        {tabela6.map((tabela6, idx) => (
+                                            <tbody key={idx} tabela={tabela6} className="cabecalho2" >
+                                                <tr>
+
+                                                    <td> {tabela6.documento}</td>
+                                                    <td> {tabela6.data}</td>
+                                                    <td> {tabela6.loja_origem}</td>
+                                                    <td> {tabela6.codigofab} </td>
+                                                    <td> {tabela6.quantidade}</td>
+                                                    <td> {tabela6.totalgeral}</td>
+                                                </tr>
+                                            </tbody>
+                                        ))}
+                                    </Table>
+                                </div>
                             </div>
+
                         </Devolu>
                     </div>
 
@@ -1032,10 +1333,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao7} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF8} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio8"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
                                         </Card>
 
                                         <div>
@@ -1060,6 +1367,35 @@ const Movimentacao = (props) => {
                                                 ))}
                                             </StickyTable>
                                         </div>
+                                    </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio8" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela7.map((tabela7, idx) => (
+                                                <tbody key={idx} tabela={tabela7} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela7.documento}</td>
+                                                        <td> {tabela7.data}</td>
+                                                        <td> {tabela7.loja_origem}</td>
+                                                        <td> {tabela7.codigofab} </td>
+                                                        <td> {tabela7.quantidade}</td>
+                                                        <td> {tabela7.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
                                     </div>
                                     <div id="pedidos2" className="hide">
 
@@ -1109,10 +1445,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao8} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF9} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio9"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
 
 
                                         </Card>
@@ -1140,13 +1482,42 @@ const Movimentacao = (props) => {
                                             </StickyTable>
                                         </div>
                                     </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio9" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela8.map((tabela8, idx) => (
+                                                <tbody key={idx} tabela={tabela8} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela8.documento}</td>
+                                                        <td> {tabela8.data}</td>
+                                                        <td> {tabela8.loja_origem}</td>
+                                                        <td> {tabela8.codigofab} </td>
+                                                        <td> {tabela8.quantidade}</td>
+                                                        <td> {tabela8.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
+                                    </div>
                                     <div id="pedidos3" className="hide">
                                         <Card className="Card13">
 
                                             <div>
                                                 <DatePicker
                                                     className='Campo'
-                                                    id='data'                                                                                                                                                                   
+                                                    id='data'
                                                     placeholderText='De:'
                                                     onChange={onChange2}
                                                     selected={selectDateIni}
@@ -1157,7 +1528,7 @@ const Movimentacao = (props) => {
                                                 />
                                                 <DatePicker
                                                     className='Campo'
-                                                    id='data'                                                    
+                                                    id='data'
                                                     placeholderText='Até:'
                                                     onChange={onChange3}
                                                     selected={selectDateFim}
@@ -1179,10 +1550,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao9} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF10} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio10"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
                                         </Card>
 
                                         <div>
@@ -1209,6 +1586,35 @@ const Movimentacao = (props) => {
                                             </StickyTable>
                                         </div>
                                     </div>
+                                </div>
+                                <div className='tabela hide'>
+                                    <Table responsive id="relatorio10" >
+                                        <thead className="cabecalho" fixed>
+                                            <tr>
+                                                <th> DOCUMENTO </th>
+                                                <th> DATA </th>
+                                                <th> LOJA </th>
+                                                <th> CÓDIGO</th>
+                                                <th> QUANTIDADE </th>
+                                                <th> TOTAL GERAL </th>
+
+                                            </tr>
+                                        </thead>
+
+                                        {tabela9.map((tabela9, idx) => (
+                                            <tbody key={idx} tabela={tabela9} className="cabecalho2" >
+                                                <tr>
+
+                                                    <td> {tabela9.documento}</td>
+                                                    <td> {tabela9.data}</td>
+                                                    <td> {tabela9.loja_origem}</td>
+                                                    <td> {tabela9.codigofab} </td>
+                                                    <td> {tabela9.quantidade}</td>
+                                                    <td> {tabela9.totalgeral}</td>
+                                                </tr>
+                                            </tbody>
+                                        ))}
+                                    </Table>
                                 </div>
                             </div>
                         </Pedido>
@@ -1276,10 +1682,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao10} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF11} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            {/*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio11"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
 
 
                                         </Card>
@@ -1306,6 +1718,35 @@ const Movimentacao = (props) => {
                                                 ))}
                                             </StickyTable>
                                         </div>
+                                    </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio11" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela10.map((tabela10, idx) => (
+                                                <tbody key={idx} tabela={tabela10} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela10.documento}</td>
+                                                        <td> {tabela10.data}</td>
+                                                        <td> {tabela10.loja_origem}</td>
+                                                        <td> {tabela10.codigofab} </td>
+                                                        <td> {tabela10.quantidade}</td>
+                                                        <td> {tabela10.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
                                     </div>
                                     <div id="troca2" className="hide">
 
@@ -1353,10 +1794,16 @@ const Movimentacao = (props) => {
 
                                             <div>
                                                 <Button onClick={tabelamovimentacao11} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF12} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                            { /*<Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio12"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
 
 
                                         </Card>
@@ -1384,6 +1831,35 @@ const Movimentacao = (props) => {
                                                 ))}
                                             </StickyTable>
                                         </div>
+                                    </div>
+                                    <div className='tabela hide'>
+                                        <Table responsive id="relatorio12" >
+                                            <thead className="cabecalho" fixed>
+                                                <tr>
+                                                    <th> DOCUMENTO </th>
+                                                    <th> DATA </th>
+                                                    <th> LOJA </th>
+                                                    <th> CÓDIGO</th>
+                                                    <th> QUANTIDADE </th>
+                                                    <th> TOTAL GERAL </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            {tabela11.map((tabela11, idx) => (
+                                                <tbody key={idx} tabela={tabela11} className="cabecalho2" >
+                                                    <tr>
+
+                                                        <td> {tabela11.documento}</td>
+                                                        <td> {tabela11.data}</td>
+                                                        <td> {tabela11.loja_origem}</td>
+                                                        <td> {tabela11.codigofab} </td>
+                                                        <td> {tabela11.quantidade}</td>
+                                                        <td> {tabela11.totalgeral}</td>
+                                                    </tr>
+                                                </tbody>
+                                            ))}
+                                        </Table>
                                     </div>
                                     <div id="troca3" className="hide">
 
@@ -1421,10 +1897,16 @@ const Movimentacao = (props) => {
                                             </TextField>
                                             <div>
                                                 <Button onClick={tabelamovimentacao12} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Filtrar</Button>{' '}
-                                                <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
+                                                <Button onClick={PDF13} style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao">Baixar PDF</Button>{' '}
                                             </div>
-                                            <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}
-
+                                           {/* <Button style={{ background: "#007bff", color: "#fff", fontSize: "13px" }} className="Botao1">Baixar Excel</Button>{' '}*/}
+                                            <ReactHTMLTableToExcel
+                                                className="Botao1"
+                                                table="relatorio13"
+                                                filename="tablexls"
+                                                sheet="tablexls"
+                                                buttonText="Baixar Excel"
+                                            />
                                         </Card>
 
                                         <div>
@@ -1451,6 +1933,35 @@ const Movimentacao = (props) => {
                                             </StickyTable>
                                         </div>
                                     </div>
+                                </div>
+                                <div className='tabela hide'>
+                                    <Table responsive id="relatorio13" >
+                                        <thead className="cabecalho" fixed>
+                                            <tr>
+                                                <th> DOCUMENTO </th>
+                                                <th> DATA </th>
+                                                <th> LOJA </th>
+                                                <th> CÓDIGO</th>
+                                                <th> QUANTIDADE </th>
+                                                <th> TOTAL GERAL </th>
+
+                                            </tr>
+                                        </thead>
+
+                                        {tabela12.map((tabela12, idx) => (
+                                            <tbody key={idx} tabela={tabela12} className="cabecalho2" >
+                                                <tr>
+
+                                                    <td> {tabela12.documento}</td>
+                                                    <td> {tabela12.data}</td>
+                                                    <td> {tabela12.loja_origem}</td>
+                                                    <td> {tabela12.codigofab} </td>
+                                                    <td> {tabela12.quantidade}</td>
+                                                    <td> {tabela12.totalgeral}</td>
+                                                </tr>
+                                            </tbody>
+                                        ))}
+                                    </Table>
                                 </div>
                             </div>
                         </Troca>

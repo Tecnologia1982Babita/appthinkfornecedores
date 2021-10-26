@@ -18,7 +18,22 @@
     .hide{
         display: none;
     }
+    .tabela {
+      overflow-y: scroll;
+      margin: 0 -15% 0% 4%;
+      height: 365px;
+      text-align: center;
+      width: 111%;
+   
+  }
 
+    th {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background: #007bff;
+      color:  white;
+  }
 
 
 
