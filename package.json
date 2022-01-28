@@ -19,7 +19,7 @@
     "antd": "^4.9.3",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.6.1",
     "date-fns": "^2.15.0",
     "dayjs": "^1.8.33",
     "framer": "^1.2.12",

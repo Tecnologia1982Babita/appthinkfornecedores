@@ -1,14 +1,59 @@
-import React from "react";
+import React, {Component, useState}from "react";
 import { TextField, Button } from "@material-ui/core";
 import MenuSuperior from "../menuSuperior/MenuSuperior";
-import { Input, Card } from "reactstrap";
+import { Input, Card, ModalBody, ModalFooter, Modal } from "reactstrap";
 
 import cadastro_produto from '../CadastroProduto/cadastro_produto.css';
 
 const Cadastro = (props) => {
+    // Modal open state
+    const [modal, setModal] = React.useState(false);
+
+    const [value, setValue] = React.useState(false);
+
+    // Toggle for Modal0
+    //const toggle = (value) => setModal(!modal);
+
+    function toggle(value) {
+        setModal(!modal);
+
+        setValue(`${value}`);
 
 
+    }
 
+      // Modal open state
+      const [modal1, setModal1] = React.useState(false);
+
+      const [value1, setValue1] = React.useState(false);
+  
+      // Toggle for Modal0
+      //const toggle = (value) => setModal(!modal);
+  
+      function toggle1(value) {
+          setModal1(!modal);
+  
+          setValue1(`${value}`);
+        }
+
+         
+        
+          
+        
+       
+     {/*   
+            this.state = { cSelected: [] };
+        
+            this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+            this.onCheckboxBtnClick = this.onCheckboxBtnClick.bind(this);
+        
+        
+            onRadioBtnClick(rSelected) 
+            this.setState({ rSelected });
+          
+     */}
+
+        
     return (
 
 
@@ -32,14 +77,26 @@ const Cadastro = (props) => {
 
                 <div className="Linha2">
                     <TextField label='Desc. Básica'><i class="material-icons-outlined">search</i></TextField>
+
                     <TextField label='Código Fornecedor'></TextField>
                     <TextField label='Ref. Fornecedor'></TextField>
                     <TextField label='NCM'></TextField>
                 </div>
 
                 <div className="Linha3">
-                    <Button className="botaodetalhe" id='estilo1'>+Detalhes</Button>
-                        <Card >
+                    <Button className="botaodetalhe" id='estilo1' onClick={toggle}>+Detalhes</Button>
+                    
+
+
+                    <Modal
+
+                        isOpen={modal}
+                        toggle={toggle}
+
+                    >
+
+
+                        <ModalBody>
                             <div>
                                 <Input type="checkbox">Abertura em Zíper</Input>
                                 <Input type="checkbox">Acessório</Input>
@@ -105,23 +162,38 @@ const Cadastro = (props) => {
                                 <Input type="checkbox">Tiras</Input>
                                 <Input type="checkbox">Tule</Input>
                             </div>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button id='estilo-botao-salvard'>Salvar Detralhes +</Button>
+                        </ModalFooter>
+                    </Modal>
 
-                            <Button className="botaosalvardetalhe" id='estilo1'>Salvar Detalhes</Button>
+                    {/*<Button className="botaosalvardetalhe" id='estilo1'>Salvar Detalhes</Button>*/}
 
-                        </Card>
-                    <Button className="botaotamanhos" id='estilo1'>+Tamanhos</Button>
-                    <Card>
-                        <h6>Qual Tipo De Grade?</h6>
-                        <hr></hr>
-                        <div>
-                            <Button id='estilo1'>Númerica (38,40, ...)</Button>
-                            <Button id='estilo1'>Não Númerica (P,M, ...)</Button>
-                        </div>
 
-                        <Button id='estilo1'>Salvar Tamanhos</Button>
-                    </Card>
+                    <Button className="botaotamanhos" id='estilo1' onClick={toggle1}>+Tamanhos</Button>
 
-                    <TextField label='Nome da Cor'></TextField>
+                    <Modal
+                    
+                        isOpen={modal1}
+                        toggle={toggle1}
+                    >
+
+                        <ModalBody>
+
+                            <h6>Qual Tipo De Grade?</h6>
+                            <hr></hr>
+                            <div>
+                                <Button id='estilo1'>Númerica (38,40, ...)</Button>
+                                <Button id='estilo1'>Não Númerica (P,M, ...)</Button>
+                            </div>
+
+                            <Button id='estilo1'>Salvar Tamanhos</Button>
+
+                        </ModalBody>
+                    </Modal>
+
+                    <TextField label='Nome da Cor' id='estilo-cor'></TextField>
                     <Button id='estilo1'>+</Button>
                 </div>
 
