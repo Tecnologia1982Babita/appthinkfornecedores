@@ -1,0 +1,18 @@
+.CorpoRetro{
+    display: grid;
+    margin: 2% 0 2% 0;
+    padding-left: 5%;
+}
+
+.CorpoRetro2{
+    display: flex;
+}
+
+.TabelaRetro{
+   margin-left: 10%;
+
+}
+
+.dataretro{
+    display: flex;
+}

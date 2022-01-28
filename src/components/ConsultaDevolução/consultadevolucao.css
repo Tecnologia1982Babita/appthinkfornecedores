@@ -1,0 +1,17 @@
+.CorpoRetroDe{
+    display: grid;
+    margin: 2% 0 2% 0;
+    padding-left: 5%;
+}
+
+.CorpoRetroDe2{
+    display: flex;
+}
+
+.TabelaRetrode{
+   margin-left: 10%;
+
+}
+.dataretrode{
+    display: flex;
+}

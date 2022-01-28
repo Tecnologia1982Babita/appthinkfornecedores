@@ -1,0 +1,32 @@
+.CorpoRomaneio{
+    display: grid;
+    margin: 2%  0 5% 0;
+    padding-left: 5%;
+    font-family: sans-serif;
+}
+hr{
+    width: 90%;
+    margin-left: -0.2%;
+}
+.SelecaoRomaneio{
+    margin-left: 2%;
+    margin-bottom: 3%;
+}
+#campromaneio{
+    width: 250px;
+}
+.SelecaoRomaneio1{
+    margin-bottom: 3%;
+}
+
+.SelecaoRomaneio2{
+    margin-left: 2%;
+    margin-bottom: 3%;
+}
+.BotaoRomaneio{
+    justify-self: start;
+}
+#estiloBotaoR{
+    background-color: #007bff;
+    width: 90px;
+}
