@@ -10,7 +10,7 @@
 }
 
 .Titulo{
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 h3{
@@ -31,15 +31,19 @@ hr{
 .Linha2{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2%;
-    margin-right: 45.5%;
+    margin-bottom: 3%;
+    margin-right: 28%;
+    /* margin-right: 45.5%;*/
+    /*tela grande margin-right: 45.5%*/
 }
 
 
 .Linha3{
     display: flex;
     justify-content: space-between;
-    margin-right: 47%;
+    margin-right:  30%;
+    margin-bottom: 2%;
+    
 }
 #estilo1{
     background-color: #007bff;
@@ -53,6 +57,7 @@ hr{
 }
 .botaogeraritens{
     justify-self: end;
+
 }
 #estilo{
     background-color: #007bff;
@@ -69,3 +74,86 @@ hr{
     background-color: #007bff;
     color: #fff;
 }
+
+#estilo-modal{
+    height: 120%;
+    width: 140%;
+}
+.campo-detalhes{
+    width: 5%;
+    margin-left: -2%;
+}
+
+.campos-tamanhos{
+    display: flex;
+    justify-content: space-between;
+}
+.campo-tamanho{
+    margin-left: 8%;     
+}
+.campo-nomecor{
+    margin-left: 10%;
+}
+.campo-tamanho-text{
+     display: flex;
+}
+.campo-tam{
+    width: 15%;
+    margin-left: 2%;
+}
+.campo-nomecor-text{
+    display: flex;
+    margin-left: -62%;
+    margin-top: -6%;
+}
+#estilo1-mais{
+    background-color: #007bff;
+    color: #fff;
+    height: 30px;
+    margin-top: 25%;
+    margin-left: 10%;
+}
+
+
+.campo1linha4{
+    margin-bottom: 2%;
+}
+
+
+@media screen and (max-width: 495px){
+    .Corpo{
+        display: grid;
+        padding: 2%;
+        font-family: sans-serif;
+    }
+    .Linha2{
+        display: grid;
+        margin-bottom: 2%;  
+
+    }
+    .campo-linha2{
+        width: 130%;
+    }
+    
+
+    .campo-tamanho{
+        margin-left: 8%;     
+    }
+    .campo-nomecor{
+        margin-left: 10%;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .linha2 TextField {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3%;
+        margin-right: 45.5%;
+     }
+
+     .campo-linha2 TextField{
+         width: 200px;
+     }
+}
+
+

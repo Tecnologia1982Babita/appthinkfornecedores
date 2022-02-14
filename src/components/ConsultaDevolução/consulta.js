@@ -59,7 +59,7 @@ const ConsultaDevolucao = (props) => {
                     <div className="dataretrode">
 
                         <TextField
-                            label='De:'
+                            label="De:"
                             id='datalancamento'
                             onChange={onChange}
                             locale={ptBR}

@@ -40,11 +40,11 @@ const MenuSuperior = (props) => {
                 </NavItem>
   */}
             <NavItem id="li2">
-              <NavLink href="/movimentacao" id="menus"><i className="material-icons md-36 souza-left ">plagiarism</i>MOVIMENTAÇÃO</NavLink>
+              <NavLink href="/movimentacao" id="menus"><i  className="material-icons md-36 souza-left ">description</i>MOVIMENTAÇÃO</NavLink>
             </NavItem>
           
               <UncontrolledDropdown id='li2'>
-                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">plagiarism</i>
+                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">shopping_bag</i>
                   PRODUTO
                 </DropdownToggle>
                 <DropdownMenu>
@@ -59,7 +59,7 @@ const MenuSuperior = (props) => {
 
 
               <UncontrolledDropdown id='li2'>
-                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">plagiarism</i>
+                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">pending_actions</i>
                   ROMANEIO
                 </DropdownToggle>
                 <DropdownMenu>
@@ -74,7 +74,7 @@ const MenuSuperior = (props) => {
 
               
               <UncontrolledDropdown id='li2'>
-                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">plagiarism</i>
+                <DropdownToggle nav caret id='menus'><i className="material-icons md-36 souza-left ">archive</i>
                   RETROLOGISTICA
                 </DropdownToggle>
                 <DropdownMenu>

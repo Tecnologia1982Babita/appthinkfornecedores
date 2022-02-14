@@ -1,48 +1,110 @@
-.CorpoConsulta{
-    display: grid;
-    margin: 0  0 5% 0;
-    padding-left: 5%;
-    font-family: sans-serif;
+.Corpo-consulta-produto{
+    overflow: none;
+    padding: 2%;
 }
 
 .TituloConsulta{
-    margin: 7% 0 0 0;
+   padding: 2%;
 }
-.selecao{
+
+.campo-linha1{
+   margin: -10% 0 3% 0;
+}
+.titulo-revista{
+    margin: 4% 0 0 0;
+}
+.campo-linha2{
     display: grid;
-    margin-left: 3.5%;
-    margin-bottom: 6%;
 }
-
-.Line1{
+.campo-selecione{
+    width: 360px;
+}
+#campo-desc-basica{
+    width: 310px;
+}
+#botao-buscar{
+    background-color: #ffff;
+    margin-top: 2%;
+    border: none;
+    color: #007bff;
+}
+.campo-nome-produto{
+    width: 360px;
+}
+.campo-nome-reffornecedor{
+    width: 360px;
+  
+}
+.campo-linha3{
     display: grid;
-
 }
-
-
-#estiloselecao{
-    width:  300px;
-}
-#estiloselecao2{
-    width: 400px;
-}
-
-.Line2{
-    display: grid;
-    margin: 5% 0 5% 0;
-
-}
-
-Button{
+.botao-consulta{
+    width: 30%;
+    height: 6vh;
     justify-self: end;
-}
-#botaoconsulta{
-    background-color: #007bff;
-    color: #fff;
+    /*tela grande: margin-right: 57%*/
+    margin-top: 2%;
 }
 
-.camposelecao{
-    display: grid;
-    width: 200px;
+#tabela-botao-colresumo{
+    background-color: #ffff;
+    border: #ffff;
+    color: #007bff;
+    justify-self: center;
 }
 
+#tabela-botao-colresumo:hover{
+    background: #fff;
+}
+
+#tabela-botao-print{
+    background-color: #ffff;
+    border: #ffff;
+    color: #007bff;
+    justify-self: center;
+}
+.body-consulta-prod{
+    display: flex;
+    overflow: none;
+}
+.tabela{
+    margin-left: 10%;
+    overflow: none;
+
+
+}
+.botao-campo{
+    display: flex;
+}
+
+/*Modal descrição básica*/
+.titulo-modal{
+    font-size: 23px;
+}
+.linha-modal-descbasica{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+
+#opt{
+    width:100px;
+    padding:3px 5px;
+    font-size:18px;
+  }
+  #mostra{
+    width:280px;
+    line-height:50px;
+    font-size:20px;
+    background:#fff;
+    border:2px solid #f00;
+    color:#00f;
+    text-align:center;
+    margin-top:40px;
+    display:none;
+    }
+
+    .hide{
+        display: none;
+    }
